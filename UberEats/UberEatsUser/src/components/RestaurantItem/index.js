@@ -1,17 +1,20 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 
 //function to display the restaurant
-const RestourantItem = (props) => {
+const RestourantItem = ({ restourant }) => {
   return (
     <View style={styles.restaurantContainer}>
       <Image
         source={{
-          uri: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/uber-eats/restaurant1.jpeg",
+          uri: restourant.image,
         }}
         style={styles.image}
       />
-      <Text style={styles.title}>{props.title}</Text>
-      <Text style={styles.subtitle}>$ $1.99 15-30 minutes</Text>
+      <Text style={styles.title}>{restourant.name}</Text>
+      <Text style={styles.subtitle}>
+        $ ${restourant.deliveryFee} {restourant.minDeliveryTime}-
+        {restourant.maxDeliveryTime} minutes
+      </Text>
     </View>
   );
 };
