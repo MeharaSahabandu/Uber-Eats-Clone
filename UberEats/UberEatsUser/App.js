@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, FlatList } from "react-native";
 import RestourantItem from "./src/components/RestaurantItem";
 import restourants from "./assets/data/restaurants.json";
 
@@ -7,8 +7,12 @@ export default function App() {
   return (
     <View style={styles.container}>
       {/*Restourant Item*/}
-      <RestourantItem restourant={restourants[0]} />
-      <RestourantItem restourant={restourants[1]} />
+      {/* <RestourantItem restourant={restourants[0]} />
+      <RestourantItem restourant={restourants[1]} /> */}
+      <FlatList
+        data={restourants}
+        renderItem={({ item }) => <RestourantItem restourant={item} />}
+      />
       <StatusBar style="auto" />
     </View>
   );

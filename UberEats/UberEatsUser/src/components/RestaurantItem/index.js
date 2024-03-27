@@ -12,7 +12,7 @@ const RestourantItem = ({ restourant }) => {
       />
       <Text style={styles.title}>{restourant.name}</Text>
       <Text style={styles.subtitle}>
-        $ ${restourant.deliveryFee} {restourant.minDeliveryTime}-
+        $ ${restourant.deliveryFee} &#8226; {restourant.minDeliveryTime}-
         {restourant.maxDeliveryTime} minutes
       </Text>
     </View>
