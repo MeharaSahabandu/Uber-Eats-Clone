@@ -2,15 +2,6 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
 import RestourantItem from "./src/components/RestaurantItem";
 
-const RestourantItem = () => {
-  return (
-    <View style={styles.restaurantContainer}>
-      <RestourantItem />
-      <RestourantItem />
-    </View>
-  );
-};
-
 export default function App() {
   return (
     <View style={styles.container}>
