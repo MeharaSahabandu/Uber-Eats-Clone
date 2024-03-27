@@ -10,11 +10,18 @@ const RestourantItem = ({ restourant }) => {
         }}
         style={styles.image}
       />
-      <Text style={styles.title}>{restourant.name}</Text>
-      <Text style={styles.subtitle}>
-        $ ${restourant.deliveryFee} &#8226; {restourant.minDeliveryTime}-
-        {restourant.maxDeliveryTime} minutes
-      </Text>
+      <View style={styles.row}>
+        <View>
+          <Text style={styles.title}>{restourant.name}</Text>
+          <Text style={styles.subtitle}>
+            $ {restourant.deliveryFee} &#8226; {restourant.minDeliveryTime}-
+            {restourant.maxDeliveryTime} minutes
+          </Text>
+        </View>
+        <View style={styles.rating}>
+          <Text>{restourant.rating}</Text>
+        </View>
+      </View>
     </View>
   );
 };
@@ -41,5 +48,21 @@ const styles = StyleSheet.create({
 
   subtitle: {
     color: "grey",
+  },
+
+  row: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  rating: {
+    marginLeft: "auto",
+    backgroundColor: "lightgray",
+    width: 35,
+    height: 35,
+    padding: 5,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
   },
 });
