@@ -6,8 +6,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       {/*Restourant Item*/}
-      <RestourantItem />
-      <RestourantItem />
+      <RestourantItem title="Res 1" />
+      <RestourantItem title="Res 2" />
       <StatusBar style="auto" />
     </View>
   );

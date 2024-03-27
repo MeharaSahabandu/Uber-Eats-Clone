@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 
 //function to display the restaurant
-const RestourantItem = () => {
+const RestourantItem = (props) => {
   return (
     <View style={styles.restaurantContainer}>
       <Image
@@ -10,7 +10,7 @@ const RestourantItem = () => {
         }}
         style={styles.image}
       />
-      <Text style={styles.title}>El Cabo Coffe Bar Tres De Mayo</Text>
+      <Text style={styles.title}>{props.title}</Text>
       <Text style={styles.subtitle}>$ $1.99 15-30 minutes</Text>
     </View>
   );
